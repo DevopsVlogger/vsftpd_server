@@ -15,7 +15,7 @@
     vsftpd_groups:
       - test
     vsftpd_users:
-      - name: test1
+      - username: test1
         comment: 'test1 user'
         groups:
           - test
