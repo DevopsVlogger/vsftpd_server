@@ -21,5 +21,6 @@
           - test
         password: 'testpassword'
         shell: /sbin/nologin
+        state: present
         
     
