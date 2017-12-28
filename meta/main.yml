@@ -1,0 +1,14 @@
+---
+galaxy_info:
+  author: Rakesh Jain
+  description: Installs and configures vsftpd on CentOS/RHEL 7.
+  license: None
+  min_ansible_version: 1.9
+  platforms:
+  - name: EL
+    versions:
+      - 7
+  categories:
+  - networking
+  - system
+dependencies: []
