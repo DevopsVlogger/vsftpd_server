@@ -19,7 +19,7 @@
     state: yes
     persistent: yes
   with_items:
-    - ftp_home-dir
+    - ftp_home_dir
     - ftpd_full_access
     
 - name: Configure vsftpd
