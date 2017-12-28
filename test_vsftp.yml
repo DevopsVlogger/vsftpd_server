@@ -15,12 +15,11 @@
     vsftpd_groups:
       - test
     vsftpd_users:
-      - name: test1
-        comment: 'test1 user'
-        groups:
-          - test
+      - username: test1
+        name: 'test1 user'
+        groups: test
         password: 'testpassword'
         shell: /sbin/nologin
-        state: present
+        home_create: yes
         
     
