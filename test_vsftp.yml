@@ -4,7 +4,7 @@
 - hosts: all
   sudo: yes
   roles: 
-    - RakeshJain.vsftpd_server
+    - vsftpd_server
     
   vars:
     vsftpd_shares_root: '/var/ftp/shares'

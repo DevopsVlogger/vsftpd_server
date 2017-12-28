@@ -8,7 +8,7 @@
     
 - name: Configure firewall to allow FTP service
   firewalld:
-    service: vsftpd
+    service: ftp
     permanent: true
     state: enabled
   notify: restart firewalld
