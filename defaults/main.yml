@@ -4,7 +4,16 @@
 vsftpd_shares_root: '/var/ftp/shares'
 #List ftp shares that need to be created
 vsftpd_shares:
+  name:
+  group:
+  directory_mode:
 # users to create with nologin
 vsftpd_users:
+  name:
+  groups:
+  password_hash:
+  shell:
+  
 # user group to create with nologin
 vsftpd_groups:
+  
