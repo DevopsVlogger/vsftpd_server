@@ -16,11 +16,10 @@
       - test
     vsftpd_users:
       - name: test1
-        gecos: "test1 user"
+        gecos: test1 user
         groups:
           - test
-        passwd: 'testpassword'
+        passwd: testpassword
         shell: /sbin/nologin
-        homedir: yes
         
     
