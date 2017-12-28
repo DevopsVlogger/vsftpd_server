@@ -50,11 +50,12 @@
 - name: define ftp shares
   file:
     state: directory
-    path: "{{ vsftpd_shares_root }}/{{ item.name }}'
+    path: "{{ vsftpd_shares_root }}/{{ item.name }}"
     owner: root
     group: "{{ item.group| default('users') }}"
     mode: "{{ item.directory_mode|default('0755') }}"
-    when: vsftpd_shares is defined
+  with_items: vsftpd_shares
+  when: vsftpd_shares is defined
 
 - name: restart the vsftpd service
   service:
