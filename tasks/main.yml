@@ -40,7 +40,7 @@
 - name: create the users
   user: 
     name: "{{ item.username }}"
-    comment: "{{ item.comment }}"
+    #comment: "{{ item.comment }}"
     shell: "{{ item.shell| default('/bin/bash') }}"
     createhome: "{{ item.createhome }}"
     groups: "{{ item.groups| join(',') }}"

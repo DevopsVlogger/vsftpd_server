@@ -16,7 +16,7 @@
       - test
     vsftpd_users:
       - username: test1
-        #comment: 'test1 user'
+        comment: "test1 user"
         groups:
           - test
         password: 'testpassword'
