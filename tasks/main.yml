@@ -37,17 +37,17 @@
     - vsftpd_groups
   when: vsftpd_groups is defined
 
-- name: create the users
+- name: create ftp users
   user:
-    name: "{{ item['key'] }}"
-    password: "{{ item['value']['password'] }}"
-    shell: "{{ item['value']['shell']|default (omit) }}"
-    comment: "{{ item['value']['comment']|default (omit) }}"
-    groups: "{{ item[value]['groups']| join(',') }}"
-    state: "{{ item['value']['state'] }}"
-  with_items: vsftpd_users
+    name: "{{ item.username }}"
+    comment: "{{ item.name | default(omit) }}"
+    groups: "{{ item.groups|join(',') }}"
+    password: "{{ item.password | default(omit) }}"
+    createhome: "{{ item.home_create | default(omit) }}"
+    shell: "{{ item.shell | default(omit) }}"
+  with_items: "{{ vsftpd_users }}"
   when: vsftpd_users is defined
-
+  
 - name: define ftp shares
   file:
     state: directory
