@@ -47,17 +47,7 @@
     state: "{{ item['value']['state'] }}"
   with_items: vsftpd_users
   when: vsftpd_users is defined
-'''  
-  user: 
-    name: "{{ item.name }}"
-    comment: "{{ item.comment }}"
-    shell: "{{ item.shell| default('/bin/bash') }}"
-    createhome: "{{ item.homedir }}"
-    groups: "{{ item.groups| join(',') }}"
-    password: "{{ item.password }}"
-  with_items: vsftpd_users
-  when: vsftpd_users is defined
-'''  
+
 - name: define ftp shares
   file:
     state: directory
