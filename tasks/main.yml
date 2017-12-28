@@ -55,7 +55,7 @@
     owner: root
     group: "{{ item.group| default('users') }}"
     mode: "{{ item.directory_mode|default('0755') }}"
-  with_items: vsftpd_shares
+  with_items: "{{ vsftpd_shares }}"
   when: vsftpd_shares is defined
 
 - name: restart the vsftpd service
