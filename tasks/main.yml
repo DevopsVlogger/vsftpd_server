@@ -8,7 +8,6 @@
     
 - name: Configure firewall to allow FTP service
   firewalld:
-    service: ftp
     port: 20-21/tcp
     permanent: true
     state: enabled
