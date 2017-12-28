@@ -41,7 +41,7 @@
   user:
     name: "{{ item.username }}"
     comment: "{{ item.name | default(omit) }}"
-    groups: "{{ item.groups|join(',') }}"
+    groups: "{{ item.groups|join(',') if item.groups is defined else vsftpd_groups|join(',')}}" }}"
     password: "{{ item.password | default(omit) }}"
     createhome: "{{ item.home_create | default(omit) }}"
     shell: "{{ item.shell | default(omit) }}"
