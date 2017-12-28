@@ -34,7 +34,7 @@
   group:
     name: "{{ item }}"
   with_items:
-    - vsftpd_groups
+    - "{{ vsftpd_groups }}"
   when: vsftpd_groups is defined
 
 - name: create ftp users
