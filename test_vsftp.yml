@@ -15,12 +15,12 @@
     vsftpd_groups:
       - test
     vsftpd_users:
-      - username: test1
-        #comment: "test1 user"
+      - name: test1
+        gecos: "test1 user"
         groups:
           - test
-        password: 'testpassword'
+        passwd: 'testpassword'
         shell: /sbin/nologin
-        create_homedir: yes
+        homedir: yes
         
     
