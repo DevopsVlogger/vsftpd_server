@@ -10,8 +10,7 @@
     vsftpd_shares_root: '/var/ftp/shares'
     vsftpd_shares:
       - name: testshare
-        group: 
-          - test
+        group: test
         directory_mode: u=rwx,g=rwx,o=rwx
     vsftpd_groups:
       - test
