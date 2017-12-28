@@ -17,7 +17,8 @@
     vsftpd_users:
       - username: test1
         name: 'test1 user'
-        groups: test
+        groups: 
+          - test
         password: 'testpassword'
         shell: /sbin/nologin
         home_create: yes
