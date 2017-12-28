@@ -1,0 +1,26 @@
+# An example playbook where the share "testshare" will be created in the folder "/var/ftp/shares"
+---
+
+- hosts: all
+  sudo: yes
+  roles: 
+    - RakeshJain.vsftpd_server
+    
+  vars:
+    vsftpd_shares_root: '/var/ftp/shares'
+    vsftpd_shares:
+      - name: testshare
+        group: test
+        directory_mode: u=rwx,g=rwx,o=rwx
+    vsftpd_groups:
+      - test
+    vsftpd_users:
+      - name: test1
+        comment: 'test1 user'
+        groups:
+          - test
+        password: 'testpassword'
+        shell: /sbin/nologin
+        create_homedir: yes
+        
+    
