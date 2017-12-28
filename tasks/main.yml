@@ -21,6 +21,7 @@
   with_items:
     - ftp_home_dir
     - ftpd_full_access
+  ignore_errors: yes
     
 - name: Configure vsftpd
   template:
