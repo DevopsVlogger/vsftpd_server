@@ -19,7 +19,7 @@
         #gecos: test1 user
         groups:
           - test
-        password: testpassword
+        password: $6$rounds=656000$QDytVVh2FNp0fxOa$q4yYDWvVC8NfwyYZEY9lhmC5UMQ/74YRkbDdtGpXUbtg0bdXBK3eGfk0EhSz.xZahAF0RV6IjCTW5xwIXN4ZZ/
         shell: /sbin/nologin
         
     
