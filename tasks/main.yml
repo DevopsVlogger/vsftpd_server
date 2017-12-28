@@ -40,11 +40,11 @@
 - name: create the users
   user: 
     name: "{{ item.name }}"
-    #comment: "{{ item.gecos }}"
+    comment: "{{ item.comment }}"
     shell: "{{ item.shell| default('/bin/bash') }}"
-    #createhome: "{{ item.homedir }}"
+    createhome: "{{ item.homedir }}"
     groups: "{{ item.groups| join(',') }}"
-    password: "{{ item.password_hash }}"
+    password: "{{ item.password }}"
   with_items: vsftpd_users
   when: vsftpd_users is defined
   
