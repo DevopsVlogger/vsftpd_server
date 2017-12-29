@@ -8,7 +8,9 @@ Run the following command from your Ansible controller node -
 **Role Variables**
 defaults/main.yml
 
-Name	              Default Value	        Description
+**Name	              Default Value	        Description**
+
+
 vsftpd_shares_root	/srv/shares	          The default ftp directory where your shares will be placed
 vsftpd_shares	        -	                  List of dicts defining the ftp shares that need to be created
 vsftpd_groups	        -                   List of dicts defining the groups that need to be created
