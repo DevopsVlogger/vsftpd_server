@@ -11,10 +11,17 @@ defaults/main.yml
 **Name	              Default Value	        Description**
 
 
-vsftpd_shares_root	/srv/shares	          The default ftp directory where your shares will be placed
-vsftpd_shares	        -	                  List of dicts defining the ftp shares that need to be created
-vsftpd_groups	        -                   List of dicts defining the groups that need to be created
-vsftpd_users	        -	                  List of dicts defining the users that need to be created
+vsftpd_shares_root	  /srv/shares	          The default ftp directory where your shares will be placed
+
+
+vsftpd_shares	          -	                  List of dicts defining the ftp shares that need to be created
+
+
+vsftpd_groups	          -                   List of dicts defining the groups that need to be created
+
+
+vsftpd_users	          -	                  List of dicts defining the users that need to be created
+
 
 **Dependencies**
 This role has no depencies
