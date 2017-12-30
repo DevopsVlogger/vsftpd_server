@@ -2,7 +2,7 @@
 - hosts: localhost
   remote_user: root
   roles:
-    - vsftpd_server
+    - { name: vsftpd_server } 
   
   vars:
     vsftpd_shares_root: '/var/ftp/shares'
