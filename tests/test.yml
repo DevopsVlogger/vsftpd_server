@@ -1,0 +1,22 @@
+---
+- hosts: localhost
+  remote_user: root
+  roles:
+    - vsftpd_server
+  
+  vars:
+    vsftpd_shares_root: '/var/ftp/shares'
+    vsftpd_shares:
+      - name: testshare
+        group: test
+        directory_mode: u=rwx,g=rwx,o=rwx
+    vsftpd_groups:
+      - test
+    vsftpd_users:
+      - username: test1
+        name: 'test1 user'
+        groups: 
+          - test
+        password: 'testpassword'
+        shell: /sbin/nologin
+        home_create: yes
